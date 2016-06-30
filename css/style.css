@@ -1,6 +1,6 @@
-#container {
-	width: 100%;
-	margin: 0 auto;
+.contenedor {
+	max-width: 1170px;
+	margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,29 +14,28 @@ p {
 	color: #999;
 }
 
-.navegador {
-	width: 1366px;
-	height: 119px;
+nav {
+	height: 76px;
 	background-color: #fff;
 }
 
-.navegador .menu {
-	width: 1170px;
-	margin: auto;
-	padding-top: 41px;
-	display: flex;
-	justify-content: space-between;
+nav img {
+	float: left;
+	margin-left: 70px;
+	margin-top: 30px;
 }
 
-.navegador .menu ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	display: flex;
-	justify-content: flex-end;
+nav ul {
+	float: right;
+	margin-top: 35px;
+	margin-right: 86px;
 }
 
-.navegador .menu li a {
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
 	font-family: 'Raleway', sans-serif;
 	font-size: .8em;
 	letter-spacing: .2em;
@@ -45,13 +44,15 @@ p {
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
+	list-style-type: none;
+	transition: 1s;
 }
 
-.navegador .menu li a:hover:active {
+nav ul li a:hover {
 	color: #000000;
 }
 
-.bloque {
+header {
 	background-color: #cccccc;
 	background: url(../assets/indexbanner-bg3.jpg) no-repeat;
 	background-size: cover;
@@ -60,67 +61,35 @@ p {
 	height: 688px;
 }
 
-.bloque .text {
-	position: absolute;
-	margin-top: 200px;
-	margin-left: 170px;
-}
-
-.bloque h1 {
+header h1 {
 	font-family: "Raleway", sans-serif;
 	font-size: 2.5em;
-	color: #dddddd;
+	color: #fff;
 	width: 446px;
+	padding-left: 97px;
+	padding-top: 220px;
 }
 
-.bloque p {
+header p {
 	font-family: "Raleway", sans-serif;
 	font-size: 1.1em;
 	color: #dddddd;
 	line-height: 1.5em;
 	width: 446px;
+	padding-left: 97px;
 }
 
 .search {
-	max-width: 1366px;
-	width: 100%;
-	margin: auto;
-	color: #adadad;
-}
-
-.search form {
-	width: 100%;
-	margin: auto;
 	text-align: center;
-	margin-top: -50;
-}
-
-.button {
-	background: #00adf2;
-	width: 20%;
-	border: none;
-	color: #ffffff;
-	font-family: "Raleway", sans-serif;
-	font-size: 1em;
-	letter-spacing:.1em;
-	font-weight: 700; 
-	text-transform: uppercase;
-	text-align: center; 
-	height: 100px;
-	margin-left: -4px;
-	box-shadow: 2px 2px 8px #e2e2e2;
-}
-
-.label {
-	max-width: 1366px;
+	margin-top: -50px;
 	width: 100%;
-	margin: -50px auto 0; 
 }
 
-.label input[type=email] {
+
+input[type=email] {
 	background: #fff;
 	border: none;
-	width: 60%;
+	width: 80%;
 	color: #cccccc;
 	font-family: "Raleway", sans-serif;
 	font-size: 1.1em;
@@ -128,10 +97,10 @@ p {
 	height: 98px;
 	box-shadow: -2px 2px 8px #e2e2e2;
 }
-/*
-.label input[type=submit] {
+
+button {
 	background: #00adf2;
-	width: 20%;
+	width: 15%;
 	border: none;
 	color: #ffffff;
 	font-family: "Raleway", sans-serif;
@@ -140,23 +109,28 @@ p {
 	font-weight: 700; 
 	text-transform: uppercase;
 	text-align: center; 
-	height: 100px;
-	padding-left: 5px;
-}*/
-
-.inner {
-	max-width: 1170px;
-	width: 100%;
-	margin: 120px auto;
-	background-color: #fff;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
-.inner ul {
-	display: flex;
-	justify-content: space-between;
+.inner {
+	text-align: center;
+}
+
+.inner ul li {
+	display: inline-block;
+	width: 24%;
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	margin-top: 116px;
+	box-sizing: border-box;
+}
+
+.inner ul li .iconos {
+	transition: 1.3s ease-in-out;
+}
+
+.inner ul li .iconos:hover {
+	transform: scale(1.35,1.35);
 }
 
 .inner .articles {
@@ -165,7 +139,7 @@ p {
 
 .inner h5 {
 	font-family: "Raleway", sans-serif;
-	font-size: .9em;
+	font-size: .85em;
 	font-weight: 700;
 	letter-spacing: .1em;
 	color: #000;
@@ -175,14 +149,16 @@ p {
 .inner p {
 	font-size: .9em;
 	color: #999;
-	width: 240px;
+	width: 100%;
 }
 
-.services .title {
+.services {
+	margin-top: 95px;
 	text-align: center;
 }
 
 .services h2 {
+	text-align: center;
 	font-size: 3em;
 	color: #000;
 	line-height: .1em;
@@ -195,10 +171,11 @@ p {
 	line-height: 1.2em;
 }
 
-.content {
-	margin-top: 4em;
-	display: flex;
-	justify-content: center;
+.servLeft {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+	margin-top: 90px;
 }
 
 .servLeft ul {
@@ -207,20 +184,14 @@ p {
 	padding: 0;
 }
 
-.content .servLeft .articlesLeft {
-	text-align: right;
-	margin-top: 50px;	
-	margin-right: 65px;
-}
-
 .articlesLeft img {
 	float: right;
+	width: 50px;
+	height: 50px;
 }
 
 .articlesLeft .infoLeft {
-	float: right;
-	margin-right: 18px;
-	width: 285px;
+	margin-right: 50px;
 	margin-bottom: 40px;
 }
 
@@ -229,12 +200,28 @@ p {
 	font-size: .8em;
 	text-transform: uppercase;
 	line-height: .5em;
+	padding-right: 20px;
+	padding-top: 23px;
 }
 
 .articlesLeft p {
 	text-align: right;
 	font-size: .9em;
-	color: 
+	padding-right: 20px;
+	line-height: 1.7em;
+}
+
+.iphoneChico {
+	display: inline-block;
+	width: 33%;
+	margin-top: 45px;
+}
+
+.servRight {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+	margin-top: 90px;
 }
 
 .servRight ul {
@@ -243,20 +230,14 @@ p {
 	padding: 0;
 }
 
-.content .servRight .articlesRight {
-	text-align: left;
-	margin-top: 50px;	
-	margin-left: 65px;
-}
-
 .articlesRight img {
 	float: left;
+	width: 50px;
+	height: 50px;
 }
 
 .articlesRight .infoRight {
-	float: left;
-	margin-left: 18px;
-	width: 285px;
+	margin-left: 50px;
 	margin-bottom: 40px;
 }
 
@@ -265,15 +246,19 @@ p {
 	font-size: .8em;
 	text-transform: uppercase;
 	line-height: .5em;
+	padding-left: 20px;
+	padding-top: 23px;
 }
 
 .articlesRight p {
 	text-align: left;
 	font-size: .9em;
-	color: 
+	padding-left: 20px;
+	line-height: 1.7em;
 }
 
-.pricing .title {
+.precios {
+	clear: left;
 	background-color: #cccccc;
 	background: url(../assets/pricing-bg.jpg) no-repeat;
 	background-size: cover;
@@ -283,43 +268,47 @@ p {
 	margin-top: -75px;
 }
 
-.pricing .title .txt {
+.precios .title .txt {
 	text-align: center;
 	padding-top: 155px;
 }
 
-.pricing h2 {
+.precios h2 {
 	font-size: 3em;
 	color: #000;
 	line-height: .1em;
 }
 
-.pricing h4 {
+.precios h4 {
 	font-size: 1.2em;
 	color: #999;
 	font-weight: 400;
 	line-height: 1.2em;
 }
 
-.pricing .packages {
-	max-width: 1170px;
-	width: 100%;
-	margin: -150px auto;
+.packages {
+	margin-top: -152px;
+	margin-bottom: 85px;
 }
 
-.pricing .packages ul {
-	display: flex;
-	justify-content: space-between;
+.packages ul {
+	text-align: center;
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 0px;
 }
 
-.pricing .packages .pack {
-	width: 270px;
+.packages .pack {
+	display: inline-block;
+	width: 22%;
 	height: 580px;
+	margin-right: 30px;
 	background-color: #fff;
-	margin-top: 0px;
+	box-shadow: 0px 0px 10px #ccc;
+}
+
+.packages .pack:last-child {
+	margin-right: 0px;
 }
 
 .packages .pack .price {
@@ -329,12 +318,18 @@ p {
 
 .packages .pack .price h5{
 	text-transform: uppercase;
+	font-size: .9em;
+	letter-spacing: .2em;
 }
 
 .packages .pack .price h1{
 	font-family: "Open Sans", sans-serif;
 	font-size: 50px;
 	margin-top: -5px;
+}
+
+.packages .pack .price p{
+	margin: -50px 0 55px 0;
 }
 
 hr {
@@ -345,14 +340,43 @@ hr {
 	color:#eff1f0;
 }
 
+.packages table {
+	margin-top: 38px;
+	margin: auto;
+	font-family: "Raleway", sans-serif;
+	font-size: .9em;
+	line-height: 2em;
+}
+
+#small span {
+	color: #00adf2;
+}
+
+#normal span {
+	color: #ffd200;
+}
+
+#big span {
+	color: #ff8400;
+}
+
+#best span {
+	color: #ff0000;
+}
+
+.packages table td:first-child {
+	width: 140px;
+}
+
 .buttonPlan {
 	background: #00adf2;
-	width: 210px;
+	width: 80%;
 	height: 30px;
 	margin: auto;
 	border-radius: 5px;
 	text-align: center;
 	padding-top: 10px;
+	margin-top: 30px;
 }
 
 .buttonPlan a {
@@ -365,70 +389,324 @@ hr {
 	text-decoration: none;
 }
 
-.hosting {
-	width: 100%;
-	height: 225px;
+footer .hosting {
 	background-color: #142e3f;
 }
 
-.hosting h3 {
+footer .hosting h3 {
 	color: #fff;
 	text-align: center;
 	font-weight: 300;
 	font-size: 2em;
-	padding-top: 80px;
 	font-family: "Raleway", sans-serif;
+	padding-top: 90px;
+	padding-bottom: 90px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
-.hosting span {
+footer .hosting span {
 	font-weight: 700;
 	color: #03b2f5;
 	font-size: 1.3em;
 	font-family: "Open Sans", sans-serif;
 }
 
-.navFooter {
-	width: 100%;
-	height: 110px;
-	background-color: #091722;
+.copyright {
+	background-color: #161d27;
+	margin-top: -32px;
 }
 
-.navFooter .copy {
-	width: 1170px;
-	margin: auto;
-}	
-
-.copy h6 {
+.copyright h6 {
 	color: #fff;
 	font-weight: 300;
-	float: left;
-	padding-top: 23px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: .9em;
 }
 
-.copy .menu {
+.copyright .menu {
+	display: inline-block;
 	float: right;
 	padding-top: 45px;
 }
 
-.copy .menu img {
+.copyright .menu img {
 	float: right;
 	padding-top: 5px;
 }
 
-.copy .menu ul {
+.copyright .menu ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	float: right;
-	display: flex;
 }
 
-.copy li a {
+.copyright .menu ul li {
+	display: inline-block;
+}
+
+.copyright li a {
 	font-family: "Raleway", sans-serif;
-	font-size: .7em;
+	font-size: .8em;
 	letter-spacing: .2em;
 	color: #fff;
 	text-decoration: none;
 	width: 200px;
 	margin-right: 30px;
+}
+
+
+@media screen and (max-width: 1169px) {
+	nav img {
+		margin-left: 30px;
+	}
+
+	.packages {
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 85px;
+	}
+
+	.packages .pack {
+		width: 44%;
+		height: 460px;
+		margin-bottom: 35px;
+	}
+
+	.packages .pack:nth-child(2n) {
+		margin-right: 0px;
+	}
+	
+	.packages .pack .price {
+	    margin-top: 70px;
+	}
+
+	.packages table {
+	    margin-top: 10px;
+		margin: auto;
+	}
+
+	.packages .pack .price p {
+	    margin: -50px 0 30px 0;
+	}
+
+	.buttonPlan {
+		width: 85%
+	    margin-top: 10px;
+	}
+
+	.precios {
+		max-width: 1170px;
+		height: 280px;
+		margin-top: 0px;
+		margin-bottom: 35px;
+	}
+
+	.precios .title .txt {
+		text-align: center;
+		padding-top: 100px;
+	}
+
+	footer {
+		clear:left;
+	}
+
+	.copyright {
+		background-color: #161d27;
+		margin-top: -35px;
+		text-align: center;
+	}
+
+	.copyright h6 {
+		color: #fff;
+		font-weight: 300;
+		display: block;
+		padding-top: 50px;
+		padding-bottom: 0px;
+		font-size: .9em;
+	}
+
+	.copyright .menu {
+		display: inline-block;
+		float: none;
+		padding-top: 0px;
+		padding-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 977px) {
+
+	.contenedor {
+		max-width: 960px;
+		margin: auto;
+	}
+
+	header h1 {
+		padding-left: 15px;
+		padding-top: 220px;
+	}
+
+	header p {
+		padding-left: 15px;
+	}
+
+	.inner ul li {
+		width: 49%;
+		padding: 0 50px;
+	}
+
+	.servLeft {
+		width: 36%;
+		margin-top: 50px;
+	}
+
+	.articlesLeft .infoLeft {
+		margin-right: 0px;
+		margin-left: 50px;
+		margin-bottom: 40px;
+	}
+
+	.iphoneChico {
+		width: 27%;
+		margin-top: 45px;
+	}
+
+	.iphoneChico img {
+		width: 218px;
+		height: 453px;
+	}
+
+	.servRight {
+		width: 36%;
+		margin-top: 50px;
+	}
+
+	.articlesRight .infoRight {
+		margin-right: 0px;
+		margin-left: 50px;
+		margin-bottom: 40px;
+	}
+
+	.precios {
+		max-width: 977px;
+		height: 280px;
+		margin-top: 25px;
+	}	
+}
+
+@media screen and (max-width: 768px) {
+	nav {
+		height: 176px;
+		text-align: center;
+	}
+
+	nav img {
+		float: none;
+		margin-top: 30px;
+	}
+
+	nav ul {
+		float: none;
+		margin-top: 34px;
+		margin-right: 40px;
+	}
+
+	nav ul li:nth-child(2) {
+		display: block;
+		text-align: center;
+		padding-top: 20px;
+	}
+
+	header {
+		display: none;
+	}
+
+	.search {
+		margin-top: 10px;
+	}
+
+	.inner ul li {
+		margin-top: 60px;
+	}
+
+	.precios {
+		max-width: 977px;
+		height: 280px;
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 580px) {
+
+	.contenedor {
+		max-width: 564px;
+		margin: auto;
+	}
+
+	button img {
+		visibility: hidden;
+	}
+
+	.inner ul li {
+		width: 95%;
+		padding: 0 20px;
+		margin-top: 20px;	
+	}
+	
+	.servLeft {
+		width: 95%;
+		margin-top: 50px;
+	}
+
+	.articlesLeft img {
+		float: left;
+		width: 50px;
+		height: 50px;
+	}
+
+	.articlesLeft .infoLeft {
+		margin-left: 50px;
+		margin-bottom: 40px;
+	}
+
+	.articlesLeft h5 {
+		text-align: left;
+		font-size: .8em;
+		text-transform: uppercase;
+		line-height: .5em;
+		padding-left: 20px;
+		padding-top: 23px;
+	}
+
+	.articlesLeft p {
+		text-align: left;
+		font-size: .9em;
+		padding-left: 20px;
+		line-height: 1.7em;
+	}
+
+	.iphoneChico {
+		width: 95%;
+		margin-top: 15px;
+	}
+
+	.iphoneChico img {
+		width: 218px;
+		height: 453px;
+	}
+
+	.servRight {
+		width: 95%;
+		margin-top: 25px;
+	}
+
+	.articlesRight .infoRight {
+		margin-left: 50px;
+		margin-bottom: 40px;
+	}
+	
 }
